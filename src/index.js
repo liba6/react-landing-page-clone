@@ -4,12 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Global, css } from '@emotion/react';
+import Greycliffcf from './fonts/Fontspring-DEMO-greycliffcf-medium.otf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Global
       styles={css`
+        @font-face {
+          font-family: 'Greycliffcf';
+          src: url(${Greycliffcf}) format('opentype');
+        }
         body {
           margin: 0;
           font-family: Greycliffcf, sans-serif;
