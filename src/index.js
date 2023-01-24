@@ -1,10 +1,10 @@
+import './index.css';
+import { css, Global } from '@emotion/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { Global, css } from '@emotion/react';
 import Greycliffcf from './fonts/Fontspring-DEMO-greycliffcf-medium.otf';
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,9 +18,7 @@ root.render(
         body {
           margin: 0;
           font-family: Greycliffcf, sans-serif;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          background-color: #fff5ed;
+           background-color: #fff5ed;
           color: #242423;
           font-size: 18px;
         }
