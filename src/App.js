@@ -2,22 +2,34 @@
 
 import { css } from '@emotion/react';
 import logo from './logo.svg';
+//import font from './fonts';
 
+//@font-face {
+//font-family: "font"
+//}
 const navBar = css`
   background-color: lavenderblush;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 14px 0;
   padding: 14px 21px;
   border-radius: 8px;
+`;
+const rivermate = css`
+  margin-right: 42px;
 `;
 
 const navBarTabs = css`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 22px;
+  align-items: center;
+  width: 732px;
+  margin-right: 84px;
+  text-align: left;
+
+  //gap: 22px;
 `;
 const flamingPricing = css`
   display: flex;
@@ -26,8 +38,9 @@ const flamingPricing = css`
 `;
 const rightNav = css`
   display: flex;
-  //justify-content: space-between;
-  gap: 40px;
+  justify-content: space-between;
+  width: 355px;
+  height: 46px;
 `;
 const login = css`
   display: flex;
@@ -40,6 +53,11 @@ const navbutton = css`
   border: 2px solid #0f0f0f;
   background-color: transparent;
   color: #0f0f0f;
+  width: 125px;
+`;
+const getStarted = css`
+  color: #ffffff;
+  background-color: #454443;
 `;
 const centerSection = css`
   text-align: center;
@@ -57,11 +75,14 @@ function App() {
   return (
     <div>
       <nav css={navBar}>
-        <img
-          src="https://uploads-ssl.webflow.com/627275b349f60885b6c33689/6276d5749c10c960bc0422a4_rivermate.svg"
-          height="22"
-          alt="rivermate logo"
-        />
+        <div>
+          <img
+            css={rivermate}
+            src="https://uploads-ssl.webflow.com/627275b349f60885b6c33689/6276d5749c10c960bc0422a4_rivermate.svg"
+            height="22"
+            alt="rivermate logo"
+          />
+        </div>
         <div css={navBarTabs}>
           <p>
             How it Works
@@ -93,7 +114,7 @@ function App() {
               alt="upward arrow"
             ></img>
           </div>
-          <button css={navbutton}>Get Started</button>
+          <button css={[navbutton, getStarted]}>Get Started</button>
           <button css={navbutton}>Book A Call </button>
         </div>
       </nav>
