@@ -303,15 +303,13 @@ function App() {
             image="https://uploads-ssl.webflow.com/627275b349f60885b6c33689/627a2e55868a468dbb47b3f7_business-3d-globe-min.webp"
             loading="lazy"
             sizes="58.75px"
-            alt="Hire remote employees"
-            title="chief"
+            title="Hire global employees"
             description="Hire remote employees in over 150 countries"
           />
           <LandingTwo
             image="https://uploads-ssl.webflow.com/627275b349f60885b6c33689/62823ad6184b9df198765343_business-3d-web-page-min.webp"
             loading="lazy"
             sizes="75.578125px"
-            alt="Manage your team"
             title="Manage your team"
             description="Manage time off, expenses and payroll in one dashboard"
           />
@@ -319,7 +317,6 @@ function App() {
             image="https://uploads-ssl.webflow.com/627275b349f60885b6c33689/6282499d02568e2d00352c3a_business-3d-red-heart-icon-min.webp"
             loading="lazy"
             sizes="74.203125px"
-            alt="Provide benefits"
             title="Provide benefits"
             description="Provide statutory benefits and global health insurance"
           />
@@ -327,7 +324,6 @@ function App() {
           <LandingTwo
             image="https://uploads-ssl.webflow.com/627275b349f60885b6c33689/628251b126a46a69b06b95c0_privacy-compliance.webp"
             sizes="57.828125px"
-            alt="Privacy compliance"
             title="Stay compliant"
             description="Stay 100% complaint in all countries with our platform"
           />

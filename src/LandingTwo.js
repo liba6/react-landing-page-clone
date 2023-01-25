@@ -10,6 +10,10 @@ const card = css`
   align-items: center;
   height: 244px;
   width: 306px;
+  border-radius: 10px;
+  :hover {
+    background-color: #e9e9e9;
+  }
 `;
 
 const h5 = css`
@@ -28,7 +32,7 @@ const cardBottom = css`
 export default function LandingTwo(props) {
   return (
     <div css={card}>
-      <img src={props.image}/>
+      <img src={props.image} alt="" width={props.sizes} />
       <h5 css={h5}>{props.title}</h5>
       <div css={cardBottom}>{props.description}</div>
     </div>
