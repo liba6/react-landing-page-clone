@@ -17,6 +17,7 @@ const navBar = css`
   width: 1265px;
   height: 46px;
   justify-items: center;
+  left: 42px;
 `;
 
 const navBarScrolled = css`
@@ -34,6 +35,7 @@ const navBarScrolled = css`
   border-radius: 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   justify-items: center;
+  left: 42px;
 `;
 
 const rivermate = css`
@@ -174,6 +176,8 @@ const beforeCard = css`
 const cards = css`
   display: flex;
   justify-content: space-between;
+  width: 1272px;
+  margin-left: 42px;
 `;
 
 function App() {
@@ -301,21 +305,18 @@ function App() {
         <div css={cards}>
           <LandingTwo
             image="https://uploads-ssl.webflow.com/627275b349f60885b6c33689/627a2e55868a468dbb47b3f7_business-3d-globe-min.webp"
-            loading="lazy"
             sizes="58.75px"
             title="Hire global employees"
             description="Hire remote employees in over 150 countries"
           />
           <LandingTwo
             image="https://uploads-ssl.webflow.com/627275b349f60885b6c33689/62823ad6184b9df198765343_business-3d-web-page-min.webp"
-            loading="lazy"
             sizes="75.578125px"
             title="Manage your team"
             description="Manage time off, expenses and payroll in one dashboard"
           />
           <LandingTwo
             image="https://uploads-ssl.webflow.com/627275b349f60885b6c33689/6282499d02568e2d00352c3a_business-3d-red-heart-icon-min.webp"
-            loading="lazy"
             sizes="74.203125px"
             title="Provide benefits"
             description="Provide statutory benefits and global health insurance"
