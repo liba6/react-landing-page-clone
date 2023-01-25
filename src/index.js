@@ -18,7 +18,7 @@ root.render(
         body {
           margin: 0;
           font-family: Greycliffcf, sans-serif;
-           background-color: #fff5ed;
+          background-color: #fff5ed;
           color: #242423;
           font-size: 18px;
         }
