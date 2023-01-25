@@ -1,16 +1,37 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from '@emotion/react';
+import React, { useState } from 'react';
 
 const navBar = css`
-  background-color: lavenderblush;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 14px 0;
-  padding: 14px 21px;
+  padding: 46px 28px;
   border-radius: 8px;
-`;
+  position: fixed;
+  z-index:100;
+  width: 1265px;
+  height: 46px;
+  `;
+
+const navBarScrolled = css`
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 14px 0;
+  padding: 35px 28px;
+  border-radius: 8px;
+  position: fixed;
+  z-index:100;
+  width: 1265px;
+  height: 46px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+`
 const rivermate = css`
   margin-right: 42px;
 `;
@@ -21,10 +42,10 @@ const navBarTabs = css`
   justify-content: space-between;
   align-items: center;
   width: 732px;
-  margin-right: 84px;
   text-align: left;
+  font-size: 18px;
+  padding-right: 84px;
 
-  //gap: 22px;
 `;
 const flamingPricing = css`
   display: flex;
@@ -34,25 +55,30 @@ const flamingPricing = css`
 const rightNav = css`
   display: flex;
   justify-content: space-between;
-  width: 355px;
+  width: 340px;
   height: 46px;
-`;
+  font-size: 16px;
+  line-height: 24px;
+  align-items: center;
+`
 const login = css`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 const navbutton = css`
-  padding: 9px 21px;
+  padding: 10px 17px;
   border-radius: 10px;
   border: 2px solid #0f0f0f;
   background-color: transparent;
   color: #0f0f0f;
-  width: 125px;
+  //width: 125px;
+  font-family:Greycliffcf;
+  font-size: 16px;
 `;
 const getStarted = css`
   color: #ffffff;
-  background-color: #454443;
+  background-color: #242423;
 `;
 const centerSection = css`
   text-align: center;
@@ -65,6 +91,7 @@ const centerImage = css`
   max-height: 280px;
   justify-content: center;
   width:424px;
+  margin-top: 480px;
 `;
 
 const afterImageButtons = css`
@@ -79,6 +106,7 @@ const afterImageButtons = css`
     padding:14px 28px;
     border-radius: 10px;
     font-size: 18px;
+    font-family:Greycliffcf
   }
  `
  const logoRow = css `
@@ -129,9 +157,19 @@ const mainBottomContainer = css `
     padding-left: 28px;
 `
 function App() {
+  const [navBarBackgroundColor, setNavBarBackgroundColor] = useState(false);
+  const changeBackgroundColor =  ()=> {
+    if (window.scrollY >= 96) {
+      setNavBarBackgroundColor(true)
+    } else {
+      setNavBarBackgroundColor(false)
+    }
+  }
+  window.addEventListener('scroll', changeBackgroundColor);
+
   return (
     <div>
-      <nav css={navBar}>
+      <nav css={navBarBackgroundColor? navBarScrolled : navBar}>
           <img
             css={rivermate}
             srcSet="https://uploads-ssl.webflow.com/627275b349f60885b6c33689/6276d5749c10c960bc0422a4_rivermate.svg"
@@ -169,8 +207,8 @@ function App() {
               alt="upward arrow"
             />
           </div>
-          <button css={[navbutton, getStarted]}>Get Started</button>
-          <button css={navbutton}>Book A Call </button>
+          <button css={[navbutton, getStarted]}>Get started</button>
+          <button css={navbutton}>Book a call </button>
         </div>
       </nav>
       <section css={centerSection}>
